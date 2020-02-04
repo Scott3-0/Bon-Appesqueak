@@ -21,7 +21,7 @@ public class movementScript : MonoBehaviour
         if (Input.GetKey("d"))
         {
             pos.x += panSpeed * Time.deltaTime;
-        }
+        } 
         if (Input.GetKey("a"))
         {
             pos.x -= panSpeed * Time.deltaTime;
