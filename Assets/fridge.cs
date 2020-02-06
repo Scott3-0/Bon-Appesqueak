@@ -7,7 +7,6 @@ public class fridge : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start!");
     }
 
     // Update is called once per frame
@@ -18,6 +17,6 @@ public class fridge : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("I collided!");
+        Debug.Log("fridge");
     }
 }
