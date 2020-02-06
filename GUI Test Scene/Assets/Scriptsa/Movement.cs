@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    double speed;
+    float speed = 8;
+    float rotSpeed = 150;
 
     void Start()
     {
@@ -12,19 +13,12 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+        Vector3 pos = transform.position;
 
-        if (Input.GetAxisRaw("Fire3") > 0)
-        {
-            speed = 0.13;
-        }
-        else
-        {
-            speed = 0.065;
-        }
-        Debug.Log(speed);
-        gameObject.transform.position = new Vector3(transform.position.x + (float)(x * speed),
-            0.125f, transform.position.z + (float)(y * speed));
+        float mov = Input.GetAxis("Vertical");
+
+        Debug.Log(f);
+        gameObject. transform.Translate(Vector3.forward * mov * Time.deltaTime * speed);
+        gameObject.transform.Rotate(0, Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime, 0);
     }
 }
