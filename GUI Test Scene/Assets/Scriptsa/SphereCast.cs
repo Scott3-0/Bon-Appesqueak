@@ -13,12 +13,30 @@ public class SphereCast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
-        Ray ray;
-        if ( 
-            Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
-        {
-        }
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit hit = new RaycastHit();
+        float rayDist = 1.5f;
+
         Debug.DrawRay(transform.position, transform.forward, Color.green);
+        if (Physics.Raycast(ray, out hit, rayDist))
+        {
+            //Debug.Log(hit.transform.name);
+            if(hit.transform.name == "Fridge")
+            {
+               
+            }
+        }
+        else
+        {
+           // Debug.Log("Nothing hit");
+        }
+        if (Input.GetKey("e"))
+        {
+            guiOpen();
+        }
+    }
+    public void guiOpen()
+    {
+
     }
 }
