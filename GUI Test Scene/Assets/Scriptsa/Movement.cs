@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    double speed;
+
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetAxisRaw("Fire3") > 0)
+        {
+            speed = 0.13;
+        }
+        else
+        {
+            speed = 0.065;
+        }
+        Debug.Log(speed);
+        gameObject.transform.position = new Vector3(transform.position.x + (float)(x * speed),
+            0.125f, transform.position.z + (float)(y * speed));
     }
 }
