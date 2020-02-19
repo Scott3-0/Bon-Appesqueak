@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/KitchenSceneStuff/Scenes/Kitchen.unity
+- path: Assets/bruh bruh.unity
   isLoaded: 1
   isActive: 1
