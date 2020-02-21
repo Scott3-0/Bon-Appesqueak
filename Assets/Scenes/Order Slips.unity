@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 1567198149}
   - component: {fileID: 1567198151}
   - component: {fileID: 1567198150}
+  - component: {fileID: 1567198152}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -661,6 +662,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567198148}
   m_CullTransparentMesh: 0
+--- !u!114 &1567198152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567198148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a289211b246574696a75f75137d08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderText: {fileID: 1636996840}
 --- !u!1 &1636996838
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +999,6 @@ GameObject:
   - component: {fileID: 2127664050}
   - component: {fileID: 2127664049}
   - component: {fileID: 2127664048}
-  - component: {fileID: 2127664047}
   m_Layer: 0
   m_Name: Order Slip
   m_TagString: Untagged
@@ -993,18 +1006,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2127664047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127664046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06a289211b246574696a75f75137d08e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2127664048
 BoxCollider:
   m_ObjectHideFlags: 0
