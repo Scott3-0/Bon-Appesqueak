@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/movementScene.unity.meta
 guid: f10024d803823314a865e57d945e0081
+=======
+guid: 960f25c5f3ed0ab42ac15301503510a2
+>>>>>>> KitchenScene:Assets/KitchenSceneStuff/Scenes/Kitchen.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
