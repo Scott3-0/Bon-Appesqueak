@@ -78,7 +78,7 @@ public class Toast : MonoBehaviour
 
     void cutBread()
     {
-        Bread.Translate(Vector3.right * 30f * Time.deltaTime);
+        Bread.Translate(Vector3.right * -30f * Time.deltaTime);
         hasToast = true;
     }
 }
