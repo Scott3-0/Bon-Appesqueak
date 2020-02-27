@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movementScript : MonoBehaviour
 {
-    public float speed = 50;
+    public float speed;
     public float Between;
     float turnspeed = 150f;
 
