@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2172037286614618449}
   m_Layer: 0
-  m_Name: untitled
+  m_Name: Toast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2172037286614977905}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.521, y: 0, z: 0}
+  m_LocalPosition: {x: 41.17, y: 1.3, z: 13.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2172037286614618451}
@@ -124,4 +124,4 @@ MonoBehaviour:
   timerText: {fileID: 0}
   Timer: {fileID: 0}
   Bread: {fileID: 2172037286614618451}
-  breadMaterial: {fileID: 2172037286614977907}
+  ToastShader: {fileID: 0}
