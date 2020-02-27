@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 m_EditorVersion: 2018.4.7f1
 =======
+<<<<<<< HEAD
+m_EditorVersion: 2018.4.7f1
+=======
 m_EditorVersion: 2018.4.8f1
 >>>>>>> master
+>>>>>>> KitchenScene
