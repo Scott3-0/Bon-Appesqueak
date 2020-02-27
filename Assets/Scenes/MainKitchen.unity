@@ -7668,11 +7668,15 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
 <<<<<<< HEAD:Assets/Scenes/MainKitchen.unity
+<<<<<<< HEAD:Assets/Scenes/MainKitchen.unity
 <<<<<<< HEAD:Assets/KitchenSceneStuff/Scenes/Kitchen.unity
   - {fileID: 659864114}
 =======
   - {fileID: 1909523996}
 >>>>>>> master:Assets/Scenes/Kitchen.unity
+=======
+  - {fileID: 269396812}
+>>>>>>> parent of bb9f52b... rat textures:Assets/KitchenSceneStuff/Scenes/Kitchen.unity
 =======
   - {fileID: 269396812}
 >>>>>>> parent of bb9f52b... rat textures:Assets/KitchenSceneStuff/Scenes/Kitchen.unity
