@@ -15,7 +15,7 @@ public class movementScript : MonoBehaviour
         Vector3 pos = transform.position;
         RaycastHit hit;
         Ray myRay = new Ray(transform.position, transform.forward);
-        float distance = 1f;
+        float distance = 2f;
         //use raycasts here. check max distance, use a bool
 
         float mov = Input.GetAxis("Vertical");
