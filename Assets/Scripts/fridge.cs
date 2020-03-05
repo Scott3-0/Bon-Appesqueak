@@ -19,7 +19,7 @@ public class fridge : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("fridge");
-        Rat.GetComponent<Toast>().cuttingBread();
+        //Debug.Log("fridge");
+        //Rat.GetComponent<Toast>().cuttingBread();
     }
 }

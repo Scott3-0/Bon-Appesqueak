@@ -8,8 +8,10 @@ public class Toast : MonoBehaviour
 {
     bool Toasting = false;
     bool Toasted = false;
-    bool hasToast = false;
+    bool hasBread = false;
     bool hasKnife = true;
+    bool breadCut = false;
+    bool nearBread = false;
     float timeLeft = 5.0f;
     double timerTime;
     int breadPopUp = 0;
@@ -20,8 +22,11 @@ public class Toast : MonoBehaviour
 
     public Text timerText;
     public GameObject Timer;
-    public Transform Bread;
+    public GameObject Loaf;
+    public Transform BreadTransform;
+    public GameObject Bread;
     public Material ToastShader;
+    public GameObject RatBread;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +42,13 @@ public class Toast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && Toasted == false && Toasting == false && hasToast == true)
+        if (Input.GetKeyDown(KeyCode.Space) && !hasBread && breadCut && nearBread)
+        {
+            hasBread = true;
+            getBread();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && !Toasted && !Toasting && hasBread)
         {
             Toasting = true;
             Timer.SetActive(true);
@@ -63,26 +74,31 @@ public class Toast : MonoBehaviour
 
         if(Toasted == true && breadPopUp < 7)
         {
-            Bread.Translate(Vector3.up * 7f * Time.deltaTime);
+            BreadTransform.Translate(Vector3.up * 7f * Time.deltaTime);
             breadPopUp++;
         }
     }
 
-    public void cuttingBread()
+    void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.Space) && hasToast == false && hasKnife == true)
-        {
-            cut++;
-            if (cut >= 5)
-            {
-                cutBread();
-            }
-        }
+        Debug.Log("bread");
+        nearBread = true;
     }
 
-    void cutBread()
+    void OnTriggerExit(Collider other)
     {
-        Bread.Translate(Vector3.right * -30f * Time.deltaTime);
-        hasToast = true;
+        Debug.Log("no bread");
+        nearBread = false;
+    }
+
+    public void BreadAcquired()
+    {
+        breadCut = true;
+    }
+
+    void getBread()
+    {
+        Bread.GetComponent<Renderer>().enabled = false;
+        RatBread.SetActive(true);
     }
 }
