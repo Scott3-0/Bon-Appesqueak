@@ -37,15 +37,7 @@ public class Toast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && hasToast == false && hasKnife == true)
-        {
-            cut++;
-            if(cut>=5)
-            {
-                cutBread();
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.Space) && Toasted == false && Toasting == false && hasToast == true)
+        if (Input.GetKeyDown(KeyCode.Space) && Toasted == false && Toasting == false && hasToast == true)
         {
             Toasting = true;
             Timer.SetActive(true);
@@ -73,6 +65,18 @@ public class Toast : MonoBehaviour
         {
             Bread.Translate(Vector3.up * 7f * Time.deltaTime);
             breadPopUp++;
+        }
+    }
+
+    public void cuttingBread()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && hasToast == false && hasKnife == true)
+        {
+            cut++;
+            if (cut >= 5)
+            {
+                cutBread();
+            }
         }
     }
 
