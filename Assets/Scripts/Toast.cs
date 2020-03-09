@@ -48,15 +48,9 @@ public class Toast : MonoBehaviour
             getBread();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !Toasted && !Toasting && hasBread)
-        {
-            Toasting = true;
-            Timer.SetActive(true);
-            Toasting = true;
-        }
-
         if(Toasting == true)
         {
+            Timer.SetActive(true);
             timeLeft -= Time.deltaTime;
             timerTime = Math.Round(timeLeft, 1); 
             timerText.text = timerTime.ToString("0.0");
@@ -100,5 +94,10 @@ public class Toast : MonoBehaviour
     {
         Bread.GetComponent<Renderer>().enabled = false;
         RatBread.SetActive(true);
+    }
+
+    public void toastIt()
+    {
+        Toasting = true;
     }
 }

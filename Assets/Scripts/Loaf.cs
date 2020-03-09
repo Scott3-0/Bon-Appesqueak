@@ -6,6 +6,7 @@ public class Loaf : MonoBehaviour
 {
     public Transform Bread;
     public GameObject breadObject;
+    public GameObject Toaster;
 
     bool hasBread = false;
     bool nearBread = false;
@@ -51,5 +52,6 @@ public class Loaf : MonoBehaviour
         Bread.Translate(Vector3.right * -30f * Time.deltaTime);
         hasBread = true;
         breadObject.GetComponent<Toast>().BreadAcquired();
+        Toaster.GetComponent<toaster>().BreadAcquired();
     }
 }
