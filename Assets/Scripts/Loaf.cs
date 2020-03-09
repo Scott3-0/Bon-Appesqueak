@@ -55,3 +55,9 @@ public class Loaf : MonoBehaviour
         Toaster.GetComponent<toaster>().BreadAcquired();
     }
 }
+
+//-50.8, 1425.9, 436.3
+//0, -180, 270
+
+    //42.349, 1.3, 13.09
+    //scale 0.14, 1, 0.9
