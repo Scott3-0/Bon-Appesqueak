@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 //Useful tutorial & resources and shiz under the "UI_Inventory.cs" script
 public class Inventory //Generic class  for inventory 
 {
@@ -27,3 +27,4 @@ public class Inventory //Generic class  for inventory
         return itemList;
     }
 }
+*/

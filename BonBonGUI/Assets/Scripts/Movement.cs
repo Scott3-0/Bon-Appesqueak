@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private Inventory inventory; //get inventory data
-    [SerializeField] private UI_Inventory uiInv; //"[SerializeField]" == make this a public field to allow you to drag the UI_Inventory type object into it; can take this line and plug it into any objecy
 
     public float speed = 50;
     public float Between;
     float turnspeed = 150f;
 
     bool canGo = true;
-
-    public void Awake()
-    {
-        inventory = new Inventory(); //inventory shiz
-        uiInv.SetInv(inventory); //apply to local inventory
-    }
     void Update()
     {
         Vector3 pos = transform.position;
