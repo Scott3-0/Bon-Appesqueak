@@ -5,10 +5,14 @@ using UnityEngine;
 public class Loaf : MonoBehaviour
 {
     public Transform Bread;
-    public GameObject breadObject;
+    public Transform LoafTransform;
+    public GameObject breadPrefab;
     public GameObject Toaster;
+    public GameObject RatBread;
 
-    bool hasBread = false;
+    GameObject breadSlice;
+
+    bool breadCut = false;
     bool nearBread = false;
 
     int breadPopUp = 0;
@@ -24,13 +28,17 @@ public class Loaf : MonoBehaviour
     {
         if (nearBread)
         {
-            if (Input.GetKeyDown(KeyCode.Space)) //and hasToast==false and hasKnife==true
+            if (Input.GetKeyDown(KeyCode.Space) && !breadCut) //and hasToast==false and hasKnife==true
             {
                 cut++;
-                if (cut >= 5 && !hasBread)
+                if (cut >= 5 && !breadCut)
                 {
                     cutBread();
                 }
+            }
+            else if (Input.GetKeyDown(KeyCode.Space) && breadCut)
+            {
+                Destroy(breadSlice);
             }
         }
     }
@@ -49,15 +57,10 @@ public class Loaf : MonoBehaviour
 
     void cutBread()
     {
-        Bread.Translate(Vector3.right * -30f * Time.deltaTime);
-        hasBread = true;
-        breadObject.GetComponent<Toast>().BreadAcquired();
+        breadSlice = Instantiate(breadPrefab, new Vector3(40.745f, 1.3f, 13.09f), Quaternion.identity);
+        breadSlice.transform.Translate(Vector3.right * -30f * Time.deltaTime);
+        breadCut = true;
         Toaster.GetComponent<toaster>().BreadAcquired();
+        RatBread.SetActive(true);
     }
 }
-
-//-50.8, 1425.9, 436.3
-//0, -180, 270
-
-    //42.349, 1.3, 13.09
-    //scale 0.14, 1, 0.9

@@ -10,7 +10,7 @@ public class Toast : MonoBehaviour
     bool Toasted = false;
     bool hasBread = false;
     bool hasKnife = true;
-    bool breadCut = false;
+    bool breadCut = true;
     bool nearBread = false;
     float timeLeft = 5.0f;
     double timerTime;
@@ -42,11 +42,11 @@ public class Toast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !hasBread && breadCut && nearBread)
+        /*if (Input.GetKeyDown(KeyCode.Space) && !hasBread && breadCut && nearBread)
         {
             hasBread = true;
             getBread();
-        }
+        }*/
 
         if(Toasting == true)
         {
@@ -73,7 +73,7 @@ public class Toast : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
         Debug.Log("bread");
         nearBread = true;
@@ -83,18 +83,14 @@ public class Toast : MonoBehaviour
     {
         Debug.Log("no bread");
         nearBread = false;
-    }
+    }*/
 
-    public void BreadAcquired()
-    {
-        breadCut = true;
-    }
-
-    void getBread()
+    /*public void getBread()
     {
         Bread.GetComponent<Renderer>().enabled = false;
         RatBread.SetActive(true);
-    }
+        hasBread = true;
+    }*/
 
     public void toastIt()
     {
